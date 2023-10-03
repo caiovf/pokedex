@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokedex</title>
+        <!-- NORMALIZE -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- ROBOTO -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="assets/css/global.css">
+        <!-- POKEMON -->
+        <link rel="stylesheet" href="assets/css/pokemon.css">
+    </head>
+    <body>
+        <main class="layout-main">
+            <section class="pokedex">
+                <div class="container">
+                    <header class="section-header">
+                        <h2>Pokedex</h2>
+                    </header>
+                    <div id="list" class="section-content">
+                        <!-- inserte by js -->
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- 
+            $ npm install -g http-server - SIMULA UM SERVIDOR HTTP
+            PARA INICIAR http-server [pasta] SE JA ESTIVER NA PASTA http-server ./
+        -->
+        <script src="assets/js/pokemon-model.js"></script>
+        <script src="assets/js/api.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html> 
+
+<!-- 
+    REQUISIÇÃO HTTP 
+
+    URL: https://pokeapi.co/api/v2/pokemon${endereco}/${path = caminho de identificacao do recurso}
+
+    REQUEST METHOD: GET - PEGA DADOS DO SERVIDOR  
+                    POST - INSERE DADOS NO SERVIDOR 
+                    PUT - MODIFICA TODOS OS DADOS DO SERVIDOR 
+                    DELETE - DELETA O INDEX DO SERVIDOR 
+                    PATCH - ATUALIZA PARCIALMENTE OS DADOS DO SERVIDOR
+
+    REQUEST HEADERS
+
+    STATUS CODE: 100/199 - INDICA QUE ESTA TUDO BEM NO MOMENTO
+                 200/299 - INDICA QUE A REQUISIÇÃO FOI FEITA COM SUCESSO
+                 300/399 - INDICA QUE A REQUISIÇÀO TEM MULTIPLAS RESPOSTAS
+                 400/499 - INDICA QUE O SERVIDOR NÃO PODE PROCESSAR A REQUISIÇÃO POR CONTA DO CLIENTE
+                 500/599 - INDICA QUE O SERVIDOR NÀO CONSEGUIU RESPONDER A REQUISIÇÃO POR CONTA DE UM ERRO
+
+
+    RESPONSE HEADERS
+
+    RESPONSE BODY
+
+-->
